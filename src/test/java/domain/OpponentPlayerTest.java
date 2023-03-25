@@ -11,7 +11,7 @@ class OpponentPlayerTest {
     @DisplayName("랜덤수가 세자리 수이면 참을 반환")
     void validateDigitRange() {
         OpponentPlayer opponentPlayer = new OpponentPlayer();
-        int actual = opponentPlayer.baseBallNumbersGenerator().size();
+        int actual = opponentPlayer.baseballNumbersGenerator().size();
         assertThat(actual).isEqualTo(3);
     }
 }
