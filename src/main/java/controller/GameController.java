@@ -3,6 +3,7 @@ package controller;
 import domain.BaseballGame;
 import domain.GamePlayer;
 import domain.GameResult;
+import domain.GameStatus;
 import view.InputView;
 import view.OutputView;
 public class GameController {
@@ -18,8 +19,7 @@ public class GameController {
     }
 
     public void Init() {
-        int initStatus = inputView.init();
-        if(inputView.init() == 1) {
+        if(inputView.init() == GameStatus.START) {
             baseballGame.init();
             baseballGameStart();
         }
@@ -31,14 +31,17 @@ public class GameController {
             GameResult gameResult = baseballGame.start(gamePlayer);
             result(gameResult);
         }
+        Init();
     }
 
     private void result(GameResult gameResult) {
         if (gameResult.isAnswer()) {
             outputView.gameOver();
+            return;
         }
         if (gameResult.isNothing()) {
             outputView.nothing();
+            return;
         }
         outputView.result(gameResult);
     }
