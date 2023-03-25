@@ -11,6 +11,7 @@ public class GamePlayer {
 
     public static final String VALID_NUMBERS_RANGE = "[1-9]{3}";
     public static final int VALID_NUMBERS_LENGTH = 3;
+    public static final String SPLIT_REGEX = "";
     private final List<Integer> baseballNumbers;
 
     public GamePlayer() {
@@ -33,7 +34,7 @@ public class GamePlayer {
     }
 
     public List<Integer> numberToList(String number) {
-        int[] intNumber = Stream.of(number.split("")).mapToInt(Integer::parseInt).toArray();
+        int[] intNumber = Stream.of(number.split(SPLIT_REGEX)).mapToInt(Integer::parseInt).toArray();
         List result = new ArrayList();
         for (int element : intNumber) {
             result.add(element);

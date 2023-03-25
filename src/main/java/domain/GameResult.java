@@ -5,6 +5,10 @@ public class GameResult {
     private int strike = 0;
     private int ball = 0;
 
+    public GameResult(int strike, int ball) {
+        this.strike = strike;
+        this.ball = ball;
+    }
     public int getBall() {
         return ball;
     }
