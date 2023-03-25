@@ -19,8 +19,8 @@ public class GamePlayer {
     }
 
     public GamePlayer(String numbers) {
-        if (validateNumberRange(numbers)) throw new InvalidNumberRangeException();
-        if (validateDuplicate(numbers)) throw new DuplicateNumberException();
+        if (!validateNumberRange(numbers)) throw new InvalidNumberRangeException();
+        if (!validateDuplicate(numbers)) throw new DuplicateNumberException();
         baseballNumbers = numberToList(numbers);
     }
 

@@ -11,9 +11,6 @@ public class GameJudge {
 
     private List<Integer> opponentPlayerNumbers;
 
-    public GameJudge() {
-    }
-
     public void init(List<Integer> opponentPlayerNumbers) {
         this.opponentPlayerNumbers = opponentPlayerNumbers;
     }

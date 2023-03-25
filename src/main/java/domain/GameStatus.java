@@ -1,6 +1,10 @@
 package domain;
 
 public enum GameStatus {
-    START,
-    END
+    START("1"), END("2");
+
+    private String status;
+    GameStatus(String status) {
+        this.status = status;
+    }
 }

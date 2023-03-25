@@ -1,7 +1,6 @@
 import controller.GameController;
 import domain.BaseballGame;
 import domain.GameJudge;
-import domain.GameResult;
 import domain.OpponentPlayer;
 import view.InputView;
 import view.OutputView;
