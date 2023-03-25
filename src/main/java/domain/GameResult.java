@@ -2,6 +2,9 @@ package domain;
 
 public class GameResult {
 
+    public static final int NOTHING_VALUE = 0;
+    public static final int ANSWER_VALUE = 3;
+
     private int strike = 0;
     private int ball = 0;
 
@@ -9,6 +12,15 @@ public class GameResult {
         this.strike = strike;
         this.ball = ball;
     }
+
+    public boolean isNothing() {
+        return strike == NOTHING_VALUE && ball == NOTHING_VALUE;
+    }
+
+    public boolean isAnswer() {
+        return strike == ANSWER_VALUE;
+    }
+
     public int getBall() {
         return ball;
     }

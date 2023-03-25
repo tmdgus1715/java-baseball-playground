@@ -41,4 +41,8 @@ public class GamePlayer {
         }
         return result;
     }
+
+    public List<Integer> getBaseballNumbers() {
+        return baseballNumbers;
+    }
 }

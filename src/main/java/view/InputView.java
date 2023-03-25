@@ -16,9 +16,9 @@ public class InputView {
         return value;
     }
 
-    public String guessNumber() {
+    public GamePlayer guessNumber() {
         System.out.println(BASEBALL_NUMBER_INPUT_MESSAGE);
         String value = scanner.next();
-        return value;
+        return new GamePlayer(value);
     }
 }

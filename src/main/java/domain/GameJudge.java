@@ -26,7 +26,6 @@ public class GameJudge {
             ballAndStrike += judgeBallAndStrike(actual.get(i));
             strike += judgeStrike(actual.get(i), i);
         }
-        
         int ball = ballAndStrike - strike;
 
         return new GameResult(strike, ball);
